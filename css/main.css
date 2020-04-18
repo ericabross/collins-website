@@ -125,33 +125,92 @@ a {
 h1 {
   font-size: 3em;
   font-family: 'Pinyon Script', cursive;
-
+  margin: 0;
 }
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 2em;
+  font-family: 'Pinyon Script', cursive;
+}
+
+
+h4 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: ;
+}
+
+img {
+  width: 100%; /* check with gallery */
+}
+
+figure {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+
 
 /* ------------ Base Header and Footer Styles ------------ */
 
 /* Header Styles */
 
-
-
-header figure{
-  
-}
-
-.logo {
+header {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
-  align-content: center;
-  margin: 0;
-
+  padding: ;
 }
 
-.logo figure {
-  width: 10%;
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row-wrap;
+}
+
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: row wrap;
+  padding: 15px 0;
+}
+
+header .main-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row-wrap;
+  width: 90%;
+  font-size: 1.5em;
+  border-top: 1px solid #F2E2CE;
+}
+
+header nav ul {
+  display: flex;
+  width: 100%;
+  padding-left: 0;
 }
 
 
-/* ------------ Mobile Styles - Homepage ------------ */
+header nav ul li {
+  display: flex;
+  padding: 0 20px;
+}
 
 /* Hero Area */
 
@@ -160,15 +219,139 @@ header figure{
   background-size: cover;
   min-height: 500px;
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+
+.hero-text {
+  background-color: rgba(191, 163, 128, 0.75);
+  font-size: 1.5em;
+  color: #343840;
+  margin-bottom: 20%;
+  padding: 5% 20% 5% 10%;
+}
+
+.hero-text span {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 3em;
+}
+
+/* Aside - Newsletter Sign Up */
+
+aside {
+  display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
 }
 
-/* Aside - Form */
+aside h3 {
+  display: flex;
+  justify-content: flex-start;
+}
 
+aside p {
+  display: flex;
+  text-align: left;
+  margin-bottom: 15px;
+}
 
+.newsletter-intro {
+  width: 90%;
+  margin-top: 15px;
+}
+
+.newsletter-form {
+  width: 90%;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 1.5em;
+
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 15px 0;
+  margin-top: 20px;
+  background-color: #F28322;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #F2E2CE;
+  border: none;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* About Us */
+
+#about {
+  background:#BFA380;
+  color: #343840;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-text {
+  width: 90%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.about-text p {
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+/* Cocktail Menu */
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-text {
+  width: 90%;
+  margin-top: 50px;
+  margin-bottom: 75px;
+}
+
+.menu-text p {
+  text-align: left;
+}
+
+.cocktail h4 {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.cocktail p {
+  margin-top: 0;
+}
+
+.menu-text {}
 
 /* Photo Gallery */
+
+#gallery {
+  background:#BFA380;
+  color: #343840;
+  padding-top: 30px;
+}
+
+#gallery h1 {
+  padding-bottom: 30px;
+}
 
 .photo-gallery {
   display: grid;
@@ -196,6 +379,43 @@ header figure{
   height: 100%;
   object-fit: cover;
 }
+
+/* Contact Us */
+
+footer { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+ }
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 60%;
+}
+
+.hours h4 {
+  margin-bottom: 0;
+}
+
+.hours p {
+  margin-top: 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2em;
+}
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes
@@ -285,10 +505,28 @@ header figure{
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/* ------------ Tablet Styles ------------ */
 
-@media only screen and (min-width: 35em) {
+
+
+
+
+
+@media only screen and (min-width: 640px) {
+  /* Hero Area*/
+}
+
+
+
+
+/* ------------ Desktop Styles ------------ */
+
+@media only screen and (min-width: 1024px) {
   /* Style adjustments for viewports that meet the condition */
 }
+
+
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
