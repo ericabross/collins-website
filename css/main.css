@@ -270,7 +270,7 @@ aside p {
 input[type=text] {
   box-sizing: border-box;
   width: 100%;
-  color: #2a423a;
+  color: #343840;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 1.5em;
@@ -295,10 +295,14 @@ input[type=button] {
 #about {
   background:#BFA380;
   color: #343840;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.about-us {
 
 }
 
@@ -320,12 +324,12 @@ input[type=button] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 75px;
 }
 
 .menu-text {
   width: 90%;
-  margin-top: 50px;
-  margin-bottom: 75px;
 }
 
 .menu-text p {
@@ -509,7 +513,7 @@ footer {
 /* ------------ Tablet Styles ------------ */
 
 @media only screen and (min-width: 640px) {
-  /* Hero Area*/
+  /* Header */
 
  header figure {
     width: 100%;
@@ -571,20 +575,78 @@ footer {
 
 /* About Us */
 
-  article .about-text {
+  article {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around; 
+    align-items: flex-start;
     
   }
 
- .about-text-1, .about-text-2 {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
- }
+  .about-text-1, .about-text-2 {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
 
+ /* Cocktail Menu */
+
+  #menu {
+    
+    
+  }
+
+  .menu-text {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .cocktail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+  }
+
+  .cocktail p {
+    text-align: center;
+  }
+
+/* Photo Gallery */
+
+  .photo-gallery {
+    padding-bottom: 20px;
+  }
+
+/* Contact */
+
+  .contact-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  address {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+  }
+
+  .hours {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
+
+  .social-icons {
+    max-width: 80%;
+    margin: 0 10% 0 10%;
+  }
 
 }
 
@@ -594,6 +656,39 @@ footer {
 /* ------------ Desktop Styles ------------ */
 
 @media only screen and (min-width: 1024px) {
+  
+  /* Header */
+
+  header {
+    max-width: 1200px;
+  }
+
+  .hero-area {
+
+  }
+
+  aside {
+    max-width: 1200px;
+  }
+
+  .about-text {
+    max-width: 1200px;
+  }
+
+
+  #menu {
+    max-width: 1200px;
+  }
+
+  .photo-gallery {
+    max-width: 1200px;
+  }
+
+
+  .contact {
+    max-width: 1200px;
+  }
+
   /* Photo Gallery */
 
   .photo:nth-child(2) {
