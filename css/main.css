@@ -99,12 +99,14 @@ textarea {
    ========================================================================== */
 
 
-html {
+html, body {
   font-size: 12px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  margin: 0 auto;
   background-color: #343840;
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
@@ -171,10 +173,9 @@ header {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  padding: ;
 }
 
-header .logo {
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,19 +191,18 @@ header figure {
   padding: 15px 0;
 }
 
-header .main-nav {
+.main-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row-wrap;
-  width: 90%;
-  font-size: 1.5em;
+  font-size: 1.25em;
   border-top: 1px solid #F2E2CE;
+  width: 80%;
 }
 
 header nav ul {
   display: flex;
-  width: 100%;
   padding-left: 0;
 }
 
@@ -229,6 +229,7 @@ header nav ul li {
   font-size: 1.5em;
   color: #343840;
   margin-bottom: 20%;
+  margin-right: 20%;
   padding: 5% 20% 5% 10%;
 }
 
@@ -298,6 +299,7 @@ input[type=button] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 .about-text {
@@ -339,14 +341,13 @@ input[type=button] {
   margin-top: 0;
 }
 
-.menu-text {}
-
 /* Photo Gallery */
 
 #gallery {
   background:#BFA380;
   color: #343840;
   padding-top: 30px;
+  overflow: hidden;
 }
 
 #gallery h1 {
@@ -507,13 +508,84 @@ footer {
    ========================================================================== */
 /* ------------ Tablet Styles ------------ */
 
-
-
-
-
-
 @media only screen and (min-width: 640px) {
   /* Hero Area*/
+
+ header figure {
+    width: 100%;
+  }
+
+  .logo {
+    width: 30%;
+    margin-left: 5%;
+  }
+
+
+  .main-nav {
+    border-top: none;
+    width: 60%;
+    margin-right: 0;
+    font-size: 1.5em;
+  }
+
+  /* Hero Area */
+
+  .hero-text {
+    margin-bottom: 10%;
+    margin-right: 30%;
+    padding: 5% 20% 5% 10%;
+  }
+
+
+/* Aside - Newsletter Sign Up */
+
+  aside {
+    justify-content: space-around;
+  }
+
+  .newsletter-intro {
+    width: 40%;
+    margin-bottom: 60px;
+  }
+
+  .newsletter-intro h3 {
+    margin-top: 15px;
+    text-align: left;
+  }
+
+  .newsletter-form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     margin-top: 30px;
+     margin-bottom: 60px;
+  }
+
+ 
+
+  input[type=button] {
+    margin-bottom: 0;
+  }
+
+/* About Us */
+
+  article .about-text {
+    display: flex;
+    flex-flow: row wrap;
+    
+  }
+
+ .about-text-1, .about-text-2 {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+ }
+
+
 }
 
 
@@ -522,7 +594,13 @@ footer {
 /* ------------ Desktop Styles ------------ */
 
 @media only screen and (min-width: 1024px) {
-  /* Style adjustments for viewports that meet the condition */
+  /* Photo Gallery */
+
+  .photo:nth-child(2) {
+    grid-column: -3 / -1;
+    grid-row: 3 / 5;
+    height: 100%;
+  }
 }
 
 
