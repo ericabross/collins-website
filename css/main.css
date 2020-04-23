@@ -98,6 +98,12 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box; /*element's width/height includes content, padding, and border*/
+}
+
 
 html, body {
   font-size: 12px;
@@ -168,7 +174,7 @@ address {
 
 /* Header Styles */
 
-header {
+header .content-wrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -224,7 +230,7 @@ header nav ul li {
 }
 
 
-.hero-text {
+.hero-text-wrapper {
   background-color: rgba(191, 163, 128, 0.75);
   font-size: 1.5em;
   color: #343840;
@@ -233,7 +239,7 @@ header nav ul li {
   padding: 5% 20% 5% 10%;
 }
 
-.hero-text span {
+.hero-text-wrapper span {
   font-family: 'Pinyon Script', cursive;
   font-size: 3em;
 }
@@ -245,6 +251,10 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+aside .content-wrapper {
+  width: 90%;
 }
 
 aside h3 {
@@ -259,12 +269,7 @@ aside p {
 }
 
 .newsletter-intro {
-  width: 90%;
   margin-top: 15px;
-}
-
-.newsletter-form {
-  width: 90%;
 }
 
 input[type=text] {
@@ -319,7 +324,7 @@ input[type=button] {
 
 /* Cocktail Menu */
 
-#menu {
+#menu .content-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -333,7 +338,7 @@ input[type=button] {
 }
 
 .menu-text p {
-  text-align: left;
+  text-align: center;
 }
 
 .cocktail h4 {
@@ -515,6 +520,11 @@ footer {
 @media only screen and (min-width: 640px) {
   /* Header */
 
+ header .content-wrapper {
+    width: 100%;
+    justify-content: space-between;
+ }
+
  header figure {
     width: 100%;
   }
@@ -534,7 +544,7 @@ footer {
 
   /* Hero Area */
 
-  .hero-text {
+  .hero-text-wrapper {
     margin-bottom: 10%;
     margin-right: 30%;
     padding: 5% 20% 5% 10%;
@@ -543,12 +553,15 @@ footer {
 
 /* Aside - Newsletter Sign Up */
 
-  aside {
-    justify-content: space-around;
+  aside .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: 30px 0;
   }
 
   .newsletter-intro {
-    width: 40%;
+    width: 45%;
     margin-bottom: 60px;
   }
 
@@ -558,16 +571,14 @@ footer {
   }
 
   .newsletter-form {
-    width: 40%;
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-     margin-top: 30px;
-     margin-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 60px;
   }
-
- 
 
   input[type=button] {
     margin-bottom: 0;
@@ -592,11 +603,6 @@ footer {
   }
 
  /* Cocktail Menu */
-
-  #menu {
-    
-    
-  }
 
   .menu-text {
     display: flex;
@@ -660,41 +666,90 @@ footer {
   /* Header */
 
   header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .content-wrapper {
     max-width: 1200px;
+  }
+
+  /* Hero Area */
+
+  
+
+  .hero-text-wrapper {
+    padding: 5% 20% 5% 20%;
+    margin: 10% 0 10% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
   }
 
   .hero-area {
-
+  
+    justify-content: center;
+    flex-flow: row wrap;
   }
 
-  aside {
+  /* Newsletter Sign Up */
+
+  aside .content-wrapper {
     max-width: 1200px;
+    justify-content: space-around;
   }
+  
+  .newsletter-intro, .newsletter-form {
+    width: 40%;
+  }
+
+  
+  /* About Us */
 
   .about-text {
     max-width: 1200px;
   }
 
+  /* Cocktail Menu */
 
-  #menu {
+  section #menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .menu-text {
     max-width: 1200px;
+
+  }
+
+  /* Photo Gallery */
+
+   #gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .photo-gallery {
     max-width: 1200px;
   }
 
-
-  .contact {
-    max-width: 1200px;
-  }
-
-  /* Photo Gallery */
-
   .photo:nth-child(2) {
     grid-column: -3 / -1;
     grid-row: 3 / 5;
     height: 100%;
+  }
+
+  /* Contact */
+
+  #contact {
+    max-width: 960px;
   }
 }
 
